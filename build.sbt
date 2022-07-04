@@ -1,9 +1,9 @@
-ThisBuild / version := "0.1.1"
+ThisBuild / version := "0.1.2"
 ThisBuild / scalaVersion := "3.1.1"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "kessenger-library",
+    name := "KessengerLibrary",
     idePackagePrefix := Some("com.github.malyszaryczlowiek"),
     //organization := "com.github.malyszaryczlowiek",
     githubTokenSource := TokenSource.GitConfig("github.token"),
