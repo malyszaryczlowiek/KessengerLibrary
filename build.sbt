@@ -1,4 +1,4 @@
-ThisBuild / version := "0.1.2"
+ThisBuild / version := "0.1.3"
 ThisBuild / scalaVersion := "3.1.1"
 
 lazy val root = (project in file("."))
@@ -8,7 +8,8 @@ lazy val root = (project in file("."))
     //organization := "com.github.malyszaryczlowiek",
     githubTokenSource := TokenSource.GitConfig("github.token"),
     githubOwner := "malyszaryczlowiek",
-    githubRepository := "KessengerLibrary"
+    githubRepository := "KessengerLibrary",
+    publishConfiguration := publishConfiguration.value.withOverwrite(true) // dodane później
   )
 
 /*
