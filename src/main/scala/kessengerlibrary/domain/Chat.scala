@@ -1,7 +1,7 @@
 package com.github.malyszaryczlowiek
-package domain
+package kessengerlibrary.domain
 
-import com.github.malyszaryczlowiek.domain.Domain.{ChatId, ChatName}
+import kessengerlibrary.domain.Domain.{ChatId, ChatName}
 
 import java.time.LocalDateTime
 

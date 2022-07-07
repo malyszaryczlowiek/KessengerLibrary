@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kessengerlibrary.util.messages
+package kessengerlibrary.messages
 
 /**
  * Future implementation of custom serializer

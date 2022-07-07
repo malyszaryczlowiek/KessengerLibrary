@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kafka.configurators
+package kessengerlibrary.kafka.configurators
 
 
 // earlier was messages.kafkaConfigurations

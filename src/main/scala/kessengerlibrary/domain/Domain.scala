@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package domain
+package kessengerlibrary.domain
 
 import java.util.UUID
 

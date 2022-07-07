@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kafka.errors
+package kessengerlibrary.kafka.errors
 
 enum KafkaErrorStatus(errorType: String):
   override def toString: String = errorType

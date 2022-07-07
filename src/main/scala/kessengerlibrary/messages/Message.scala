@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kessengerlibrary.util.messages
+package kessengerlibrary.messages
 
 class Message(content: String)
 

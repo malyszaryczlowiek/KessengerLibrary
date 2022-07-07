@@ -1,9 +1,9 @@
 package com.github.malyszaryczlowiek
-package db.queries
+package kessengerlibrary.db.queries
 
-import domain.User
+import kessengerlibrary.domain.User
 
-import com.github.malyszaryczlowiek.domain.Domain.{ChatName, Login}
+import kessengerlibrary.domain.Domain.{ChatName, Login}
 
 enum QueryErrorMessage(message: String):
   override def toString: String = message

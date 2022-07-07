@@ -1,7 +1,7 @@
 package com.github.malyszaryczlowiek
-package domain
+package kessengerlibrary.domain
 
-import domain.Domain.{Login, UserID}
+import kessengerlibrary.domain.Domain.{Login, UserID}
 
 import java.util.UUID
 

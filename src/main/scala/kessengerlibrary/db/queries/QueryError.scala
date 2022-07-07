@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package db.queries
+package kessengerlibrary.db.queries
 
 
 

@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kafka.configurators
+package kessengerlibrary.kafka.configurators
 
 class KafkaTestConfigurator extends KafkaConfigurator:
   override def SERVERS: String = "localhost:9093" // in test environment we have only one kafka broker

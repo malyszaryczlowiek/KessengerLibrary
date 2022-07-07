@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package kafka.errors
+package kessengerlibrary.kafka.errors
 
 import org.apache.kafka.common.KafkaException
 import org.apache.kafka.common.errors.*

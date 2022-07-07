@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package db.queries
+package kessengerlibrary.db.queries
 
 enum QueryErrorType:
   case WARNING, ERROR, FATAL_ERROR
