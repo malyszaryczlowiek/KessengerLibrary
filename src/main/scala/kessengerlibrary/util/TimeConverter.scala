@@ -1,5 +1,5 @@
 package com.github.malyszaryczlowiek
-package util
+package kessengerlibrary.util
 
 import java.time.*
 
