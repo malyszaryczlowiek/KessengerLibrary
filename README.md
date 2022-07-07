@@ -1,2 +1,2 @@
 # KessengerLibrary
-Library containing set of traits and classes for Kessenger project. 
+Repository containing set of traits and classes for my [Kessenger](https://github.com/malyszaryczlowiek/Kessenger) project. 
