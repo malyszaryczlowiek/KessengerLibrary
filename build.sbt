@@ -24,12 +24,3 @@ lazy val root = (project in file("."))
   )
 
 
-
-/*
-
-[info] 	published kessengerlibrary_3 to https://maven.pkg.github.com/malyszaryczlowiek/KessengerLibrary/kessengerlibrary/kessengerlibrary_3/0.1.0/kessengerlibrary_3-0.1.0.pom
-[info] 	published kessengerlibrary_3 to https://maven.pkg.github.com/malyszaryczlowiek/KessengerLibrary/kessengerlibrary/kessengerlibrary_3/0.1.0/kessengerlibrary_3-0.1.0.jar
-[info] 	published kessengerlibrary_3 to https://maven.pkg.github.com/malyszaryczlowiek/KessengerLibrary/kessengerlibrary/kessengerlibrary_3/0.1.0/kessengerlibrary_3-0.1.0-sources.jar
-[info] 	published kessengerlibrary_3 to https://maven.pkg.github.com/malyszaryczlowiek/KessengerLibrary/kessengerlibrary/kessengerlibrary_3/0.1.0/kessengerlibrary_3-0.1.0-javadoc.jar
-
- */
