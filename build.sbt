@@ -1,4 +1,4 @@
-ThisBuild / version := "0.1.9"
+ThisBuild / version := "0.1.10"
 ThisBuild / scalaVersion := "3.1.1"
 
 lazy val root = (project in file("."))
@@ -11,14 +11,21 @@ lazy val root = (project in file("."))
     githubRepository  := "KessengerLibrary",
     libraryDependencies ++= Seq(
 
+
       // kafka
-      ("org.apache.kafka" %% "kafka" % "3.1.0").cross(CrossVersion.for3Use2_13),
-      "org.apache.kafka" % "kafka-clients" % "3.1.0",
+      ("org.apache.kafka" %% "kafka"        % "3.1.0").cross(CrossVersion.for3Use2_13),
+      "org.apache.kafka"  % "kafka-clients" % "3.1.0",
 
-        //      "io.circe" %% "circe-core" % "0.14.1",
-        //      "io.circe" %% "circe-generic" % "0.14.1",
-        //      "io.circe" %% "circe-parser" % "0.14.1",
 
+      // used for serdes
+      ("io.circe" %% "circe-core"    % "0.14.2").cross(CrossVersion.for3Use2_13),
+      ("io.circe" %% "circe-generic" % "0.14.2").cross(CrossVersion.for3Use2_13),
+      ("io.circe" %% "circe-parser"  % "0.14.2").cross(CrossVersion.for3Use2_13),
+
+
+      // For Tests
+      "org.scalameta" %% "munit"            % "0.7.29" % Test,
+      "org.scalameta" %% "munit-scalacheck" % "0.7.29" % Test
 
     )
   )
