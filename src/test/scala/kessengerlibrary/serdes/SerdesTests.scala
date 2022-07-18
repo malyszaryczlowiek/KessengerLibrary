@@ -4,7 +4,9 @@ package kessengerlibrary.serdes
 
 import kessengerlibrary.domain.User
 import kessengerlibrary.serdes.*
+import kessengerlibrary.messages.Message
 
+import java.time.ZoneId
 import java.util.UUID
 
 
@@ -22,6 +24,20 @@ class SerdesTests extends munit.FunSuite {
     val deserialied = deser.deserialize("", serialized)
 
     assert(deserialied == user)
+
+  }
+
+  test("Message serdes test") {
+
+    val mess = Message("Hello moto", UUID.randomUUID(), 0L, ZoneId.of("Europe/Warsaw"), "chatId" , "chatName")
+
+    val ser  = new MessageSerializer
+    val bytes = ser.serialize("", mess)
+
+    val deser = new MessageDeserializer
+    val mess2 = deser.deserialize("", bytes)
+
+    assert(mess == mess2)
 
   }
 

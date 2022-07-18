@@ -14,12 +14,12 @@ object Domain {
   type JoinId    = String
 
 
-  def generateChatId(sender: UUID, interlocutor: UUID): ChatId =
-    s"chat--$sender--$interlocutor"
+  def generateChatId(uuid1: UUID, uuid2: UUID): ChatId =
+    s"chat--$uuid1--$uuid2"
 
 
-  def generateWritingId(sender: UUID, interlocutor: UUID): WritingId =
-    s"whoIsWriting--$sender--$interlocutor"
+  def generateWritingId(uuid1: UUID, uuid2: UUID): WritingId =
+    s"whoIsWriting--$uuid1--$uuid2"
 
 
   def generateJoinId(user: UUID): JoinId =

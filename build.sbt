@@ -13,8 +13,8 @@ lazy val root = (project in file("."))
 
 
       // kafka
-      ("org.apache.kafka" %% "kafka"        % "3.1.0").cross(CrossVersion.for3Use2_13),
-      "org.apache.kafka"  % "kafka-clients" % "3.1.0",
+      ("org.apache.kafka" %% "kafka"         % "3.1.0").cross(CrossVersion.for3Use2_13),
+      "org.apache.kafka"  %  "kafka-clients" % "3.1.0",
 
 
       // used for serdes
