@@ -9,17 +9,18 @@ import java.time.{ZoneId, ZoneOffset, ZonedDateTime}
 import java.util.UUID
 
 
-case class Message(content: String, authorId: UserID, utcTime: Long, zoneId: ZoneId, chatId: ChatId, chatName: ChatName)
+case class Message(content: String, authorId: UserID, utcTime: Long, zoneId: ZoneId, chatId: ChatId, chatName: ChatName, groupChat: Boolean)
 
 object Message {
 
   given encoder: Encoder[Message] = (a: Message) => Json.obj(
-    ( "content",  Json.fromString( a.content           )),
-    ( "authorId", Json.fromString( a.authorId.toString )),
-    ( "utcTime",  Json.fromLong  ( a.utcTime           )),
-    ( "zoneId",   Json.fromString( a.zoneId.toString   )),
-    ( "chatId",   Json.fromString( a.chatId            )),
-    ( "chatName", Json.fromString( a.chatName          ))
+    ( "content",   Json.fromString ( a.content           )),
+    ( "authorId",  Json.fromString ( a.authorId.toString )),
+    ( "utcTime",   Json.fromLong   ( a.utcTime           )),
+    ( "zoneId",    Json.fromString ( a.zoneId.toString   )),
+    ( "chatId",    Json.fromString ( a.chatId            )),
+    ( "chatName",  Json.fromString ( a.chatName          )),
+    ( "groupChat", Json.fromBoolean( a.groupChat         ))
   )
 
   given decoder: Decoder[Message] = (c: HCursor) =>
@@ -30,6 +31,7 @@ object Message {
       zoneId    <- c.downField("zoneId")  .as[String]
       chatId    <- c.downField("chatId")  .as[String]
       chatName  <- c.downField("chatName").as[String]
+      groupChat <- c.downField("groupChat").as[Boolean]
     } yield {
       Message(
         content,
@@ -37,12 +39,13 @@ object Message {
         utcTime,
         ZoneId.of( zoneId ),
         chatId,
-        chatName
+        chatName,
+        groupChat
       )
     }
 
   def nullMessage: Message =
-    Message("", UUID.fromString("a092dbb2-2a69-4876-bbe4-8453aa5b6979"), 0L, ZoneOffset.UTC, "", "")
+    Message("", UUID.fromString("a092dbb2-2a69-4876-bbe4-8453aa5b6979"), 0L, ZoneOffset.UTC, "", "", false)
 
 }
 
