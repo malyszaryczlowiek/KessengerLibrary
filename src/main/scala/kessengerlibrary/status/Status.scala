@@ -6,6 +6,6 @@ enum Status:
   case NotInitialized
   case Starting
   case Running
-  case Idle
   case Error
+  case Closing
   case Terminated
