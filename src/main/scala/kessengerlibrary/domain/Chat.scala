@@ -13,7 +13,7 @@ import java.time.LocalDateTime
  * @param offset
  * @param timeOfLastMessage
  */
-case class Chat(chatId: ChatId, chatName: ChatName, groupChat: Boolean, offset: Long, timeOfLastMessage: LocalDateTime)
+case class Chat(chatId: ChatId, chatName: ChatName, groupChat: Boolean, timeOfLastMessage: LocalDateTime)
 
 object Chat:
 

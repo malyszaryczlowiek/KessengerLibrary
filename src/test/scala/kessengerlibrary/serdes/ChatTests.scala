@@ -15,13 +15,12 @@ class ChatTests extends  munit.FunSuite {
     val chatId = "Id"
     val chatName = "name"
     val groupChat = false
-    val offset = 0
     val earlierTime = LocalDateTime.now()
     val laterTime = earlierTime.plus(2L, ChronoUnit.MINUTES)
 
 
-    val earlier = Chat(chatId, chatName, groupChat, offset, earlierTime)
-    val later   = Chat(chatId, chatName, groupChat, offset, laterTime)
+    val earlier = Chat(chatId, chatName, groupChat, earlierTime)
+    val later   = Chat(chatId, chatName, groupChat, laterTime)
 
     val list = List(earlier, later)
     val sorted = list.sorted
