@@ -7,11 +7,7 @@ import java.time.LocalDateTime
 
 
 /**
- * @param chatId
- * @param chatName
- * @param groupChat
- * @param offset
- * @param timeOfLastMessage
+ *
  */
 case class Chat(chatId: ChatId, chatName: ChatName, groupChat: Boolean, timeOfLastMessage: LocalDateTime)
 

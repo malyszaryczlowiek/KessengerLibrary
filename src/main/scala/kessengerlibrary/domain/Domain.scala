@@ -5,13 +5,16 @@ import java.util.UUID
 
 object Domain {
 
-  type UserID    = UUID
-  type Login     = String
-  type Password  = String
-  type ChatName  = String
-  type ChatId    = String
-  type WritingId = String
-  type JoinId    = String
+  type UserID      = UUID
+  type Login       = String
+  type Password    = String
+  type ChatName    = String
+  type ChatId      = String
+  type WritingId   = String
+  type JoinId      = String
+  type MessageTime = Long
+  type Offset      = Long
+  type Partition   = Int
 
 
   def generateChatId(uuid1: UUID, uuid2: UUID): ChatId =
