@@ -8,6 +8,10 @@ class KafkaProductionConfigurator extends KafkaConfigurator:
   // in production each topic has three partitions,
   // and is replicated three times,
   // so we can create three kafka brokers max.
-  override def TOPIC_REPLICATION_FACTOR: Short = 3
+  override def CHAT_TOPIC_REPLICATION_FACTOR:    Short = 3
+  override def JOINING_TOPIC_REPLICATION_FACTOR: Short = 3
+
+
+
 
 
